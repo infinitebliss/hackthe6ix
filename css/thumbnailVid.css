@@ -1,6 +1,6 @@
 .videoWrapper {
   position: relative;
-  padding-bottom: 46.5%; /* 16:9 */
+  padding-bottom: 46.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
 }
