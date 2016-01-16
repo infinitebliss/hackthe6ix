@@ -14,10 +14,29 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+<!--adding fancy box -->
+    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    
+    
 
     <!-- Custom CSS -->
     <link href="css/full.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script type="text/javascript" src="/js/jquery.js"></script> 
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+        $("a.video_pop_up").fancybox({
+        'speedIn'       :   600, 
+        'speedOut'      :   200, 
+        'width  '       :   800, 
+        'height'        :   400, 
+        'type'          :   'iframe'
+    });
+    });
+    </script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,6 +80,34 @@
         /*width: 15em;*/
         /*margin: 0 0.5em 1em 0;*/
     }
+
+/*-- VIDEO PLAY BUTTON --*/
+ 
+    a.video_pop_up {
+        position:relative;
+        display:block;
+        }
+ 
+    a.video_pop_up img {
+        position: relative;
+        z-index: 5;
+    }   
+ 
+    .play {
+        width: 74px;
+        height: 73px;
+        background: url(/furniture/images/buttons/playbutton.png) no-repeat 0 0;
+        position:absolute;
+        top: 80px;
+        left: 143px;
+        z-index:500;
+        opacity: 0.8;       
+        }   
+ 
+    .play:hover {
+        opacity: 1;     
+        }
+
     
 </style>
 
@@ -126,15 +173,29 @@
 <div class="c">
   <ul>
     <li>
-      <a href="#">
-         <img src="pictures/basketballhoop.jpg" alt="" width = "300px" height = "200px">
-         <h4>Item</h4>
-     </a>
+      <a href = "http://www.youtube.com/embed/BLQFAUvwWrk?autoplay=1&amp;rel=0&amp;autohide=1" class="video_pop_up" rel="galleryVid">
+        <img src="http://img.youtube.com/vi/BLQFAUvwWrk/0.jpg" width="370" height="250" />
+       
+       <script>
+        $( document ).ready(function() {
+ 
+    $( "a" ).click(function( event ) {
+ 
+        alert( "As you can see, the link no longer took you to jquery.com" );
+ 
+        event.preventDefault();
+ 
+    });
+ 
+});
+</script>
+        <span class="play">&nbsp;</span>
+</a>
     </li>
     <li>
       <a href="http://farm6.staticflickr.com/5054/5419487429_56864894f8_o.jpg">
          <img src="pictures/basketballhoop.jpg" alt="" width = "300px" height = "200px">
-         <h4>Item</h4>
+       <h4>Item</h4>
      </a>
     </li>
     <li>
