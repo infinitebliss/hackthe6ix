@@ -14,18 +14,20 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <script type="text/javascript" src="./js/jquery.js"></script> 
+
+
 <!--adding fancy box -->
-    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-    
+    <script type="text/javascript" src="./fancybox/source/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" href="./fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
     
 
+
     <!-- Custom CSS -->
-    <link href="css/full.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script type="text/javascript" src="/js/jquery.js"></script> 
     <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function() {  
         $(".fancybox").fancybox();
         $("a.video_pop_up").fancybox({
         'speedIn'       :   600, 
@@ -176,19 +178,7 @@
       <a href = "http://www.youtube.com/embed/BLQFAUvwWrk?autoplay=1&amp;rel=0&amp;autohide=1" class="video_pop_up" rel="galleryVid">
         <img src="http://img.youtube.com/vi/BLQFAUvwWrk/0.jpg" width="370" height="250" />
        
-       <script>
-        $( document ).ready(function() {
- 
-    $( "a" ).click(function( event ) {
- 
-        alert( "As you can see, the link no longer took you to jquery.com" );
- 
-        event.preventDefault();
- 
-    });
- 
-});
-</script>
+       
         <span class="play">&nbsp;</span>
 </a>
     </li>
@@ -370,8 +360,7 @@
     </div>
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+   
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
