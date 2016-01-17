@@ -9,12 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Simple Sidebar - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/shop-homepage.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,25 +25,58 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Roboto Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css' href="css/bootstrap.min.css">
+
+    <style> 
+
+        nav {
+            font-family:"Roboto Slab", sans-serif;
+            font-variant: small-caps;
+            font-weight: 700;
+        }
+        .navbar-brand {
+            font-size:30px;
+            /*position: absolute;*/
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .navbar .container > a {
+            text-align:center;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .navbar-nav {
+            font-size:20px;
+        }
+        .navbar-toggle {
+            display:inline-block;
+        }
+
+    </style> 
+    </script>
+
 </head>
 
 <body>
-
-    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button href= "#menu-toggle" id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
             </div>
+            
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+        <!-- /#sidebar-wrapper -->
+            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="#">About</a>
@@ -54,27 +88,57 @@
                         <a href="#">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <!-- /.navbar-collapse -->
+            <a class="navbar-brand" href="index.html" style="margin-right: auto; margin-left: auto">SportsHub</a>
         </div>
+
         <!-- /.container -->
+
     </nav>
 
-    <!-- Page Content -->
+    <div id="wrapper" class="toggled" style="padding-top:-30px">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="font-family: "Roboto Slab", sans-serif">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand" style="color: white">
+                        Categories
+                </li>
+                <li>
+                    <a href="baseball.html">Baseball</a>
+                </li>
+                <li>
+                    <a href="basketball.html">Basketball</a>
+                </li>
+<!--                 <li>
+                    <a href="soccer.html">Soccer</a>
+                </li> -->
+                <li>
+                    <a href="esports.html">ESports</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+
+    </div>
+    <!-- /#wrapper -->
+
+     <!-- Page Content -->
     <div class="container">
 
         <div class="row">
-
+<!-- 
             <div class="col-md-3">
                 <p class="lead">Categories</p>
                 <div class="list-group">
-                    <a href="basketball1.html" class="list-group-item">Basketball</a>
-                    <a href="#" class="list-group-item">Hockey</a>
-                    <a href="#" class="list-group-item">Soccer</a>
+                    <a href="baseball.html#bautista" class="list-group-item">Baseball</a>
+                    <a href="basketball.html" class="list-group-item">Basketball</a>
+                    <a href="hockey.html" class="list-group-item">Hockey</a>
+                    <a href="soccer.html" class="list-group-item">Soccer</a>
                 </div>
-            </div>
-
-            <div class="col-md-9">
+            </div> -->
 
                 <div class="row carousel-holder">
 
@@ -87,13 +151,17 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="pictures/NBA.jpg" alt="" style="overflow: hidden; max-height: 300">
+                                    <a href="basketball.html"><img class="slide-image" src="pictures/nba.jpg" alt="" style="overflow: hidden; max-height: 300"></a>
+                                </div>
+                                
+                                <div class="item">
+
+                                    <a href="baseball.html"><img class="slide-image" src="pictures/MLB.jpg" alt=""></a>
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+
+                                    <a href="esports.html"><img class="slide-image" src="pictures/league.jpg" alt=""></a>
+
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -107,38 +175,30 @@
 
                 </div>
 
+                <h3>Featured Videos</h3>
+
                 <div class="row">
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <a href="featured/soccervid.html"><img src="pictures/cblol.jpg" alt="" border="0"></a>
                             <div class="caption">
                                 <!-- <h4 class="pull-right">$24.99</h4> -->
-                                <h4><a href="#">First Product</a>
+                                <h4><a href="featured/soccervid.html">LIVE: League of Legends</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
+                                <p>CBLoL Week 1 Day 2</a>.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <a href="featured/hockeyvid.html"><img src="pictures/SC2011Thumbnail.jpg" alt="" border="0"></a>
                             <div class="caption">
                                 <!-- <h4 class="pull-right">$64.99</h4> -->
-                                <h4><a href="#">Second Product</a>
+                                <h4><a href="featured/hockeyvid.html">2011 Stanley Cup Final</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Highlights of Game 7, Vancouver Canucks v. Boston Bruins, Stanley Cup Final 2011.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">12 reviews</p>
@@ -155,12 +215,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <a href="featured/kobe.html"><img src="pictures/kobe.jpg" alt="" border="0"></a>
                             <div class="caption">
                                 <!-- <h4 class="pull-right">$74.99</h4> -->
-                                <h4><a href="#">Third Product</a>
+                                <h4><a href="featured/kobe.html">Jerry West's Tribute to Kobe</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Jerry West pays tribute to Kobe Bryant before his last game in Oakland against the Golden State Warriors.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">31 reviews</p>
@@ -177,12 +237,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <a href="featured/bautista.html"><img src="pictures/batflip.jpg" alt="" border="0"></a>
                             <div class="caption">
                                 <!-- <h4 class="pull-right">$84.99</h4> -->
-                                <h4><a href="#">Fourth Product</a>
+                                <h4><a href="featured/bautista.html">Bautista's 3 Run Home Run</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Watch Bautista hit the 3-run home run that sent the Toronto Blue Jays to the LCS in a game against the Texas Rangers.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">6 reviews</p>
@@ -199,12 +259,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <a href="featured/GSWvsCAV.html"><img src="pictures/gswvscavs.jpg" alt="" border="0"></a>
                             <div class="caption">
                                 <!-- <h4 class="pull-right">$94.99</h4> -->
-                                <h4><a href="#">Fifth Product</a>
+                                <h4><a href="featured/GSWvsCAV.html">Warriors vs Cavaliers</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Christmas day rematch between the two last year finalists where Golden State took home the championship.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
@@ -220,15 +280,28 @@
                     </div>
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
+                        <div class="thumbnail">
+                            <a href="featured/TOvsSJ.html"><img src="pictures/TOvsSJ.jpg" alt="" border="0"></a>
+                            <div class="caption">
+                                <!-- <h4 class="pull-right">$94.99</h4> -->
+                                <h4><a href="featured/TOvsSJ.html">Toronto vs San Jose</a>
+                                </h4>
+                                <p>Toronto Maple Leafs suffer a humiliating 0-7 loss against the San Jose Sharks.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">24 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-
-            </div>
 
         </div>
 
@@ -256,6 +329,25 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 </body>
 
