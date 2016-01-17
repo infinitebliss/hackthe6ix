@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -13,11 +12,38 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <script type="text/javascript" src="./js/jquery.js"></script> 
+<!--adding fancy box -->
+    <script type="text/javascript" src="./fancybox/source/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" href="./fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+    
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    
 
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+   
+    <script type="text/javascript">
+    $(document).ready(function() {
+      
+        $("a.video_pop_up").fancybox({
+        'speedIn'       :   600, 
+        'speedOut'      :   200, 
+        'width  '       :   800, 
+        'height'        :   500, 
+        'type'          :   'iframe'
+    });
+    });
+    </script>
+
+
     <link href="css/3-col-portfolio.css" rel="stylesheet">
 
     <link href="css/categorycss.css" rel="stylesheet">
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,41 +51,73 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 
-    <!--add on >
-    <!-- Add jQuery library -->
-    <script type="text/javascript" src="fancybox/lib/jquery-1.10.1.min.js"></script>
+    <style>
+    
 
-    <!-- Add mousewheel plugin (this is optional) -->
-    <script type="text/javascript" src="../lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    .pattern {
+        padding-top: 50px;
+        max-width: 100%;
+        max-height: 320px;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
 
-    <!-- Add fancyBox main JS and CSS files -->
-    <script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
-    <link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    .c {
+        width: 4000px;
+        max-height 420px;
+        overflow-x: scroll;
+    }
+    img {
+        display: block;
+        margin: 0;
+        padding-right: 30px;
+    }
 
-    <!-- Add Button helper (this is optional) -->
-    <link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
-    <script type="text/javascript" src="../source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+    }
 
-    <!-- Add Thumbnail helper (this is optional) -->
-    <link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
-    <script type="text/javascript" src="../source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    li {
+        float: left;
+        /*width: 15em;*/
+        /*margin: 0 0.5em 1em 0;*/
+    }
 
-    <!-- Add Media helper (this is optional) -->
-    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-    <style type="text/css">
-        .fancybox-custom .fancybox-skin {
-            box-shadow: 0 0 50px #222;
+/*-- VIDEO PLAY BUTTON --*/
+ 
+    a.video_pop_up {
+        position:relative;
+        display:block;
+        }
+ 
+    a.video_pop_up img {
+        position: relative;
+        z-index: 5;
+    }   
+ 
+    .play {
+        width: 74px;
+        height: 73px;
+        background: url(/furniture/images/buttons/playbutton.png) no-repeat 0 0;
+        position:absolute;
+        top: 80px;
+        left: 143px;
+        z-index:500;
+        opacity: 0.8;       
+        }   
+ 
+    .play:hover {
+        opacity: 1;     
         }
 
-        /*body {
-            max-width: 700px;
-            margin: 0 auto;
-        }*/
-    </style>
+    
+</style>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 
 </head>
 
@@ -138,16 +196,16 @@
 <div class="c">
   <ul>
     <li>
-        <a href = "http://www.youtube.com/embed/BLQFAUvwWrk?autoplay=1&amp;rel=0&amp;autohide=1" class="video_pop_up" rel="galleryVid">
-            <img src="http://img.youtube.com/vi/BLQFAUvwWrk/0.jpg" width="356" height="200" />
-            <h4>Item</h4>
+        <a href = "http://www.youtube.com/embed/hU6CqTlrl2k?autoplay=1&amp;rel=0&amp;autohide=1" class="video_pop_up" rel="galleryVid">
+            <img src="http://img.youtube.com/vi/hU6CqTlrl2k/0.jpg" width="356" height="200" />
+            <h4>Texas Rangers vs Houston Astros Aug, 3</h4>
             <span class="play">&nbsp;</span>
         </a>
     </li>
     <li>
-      <a href = "http://www.youtube.com/embed/BLQFAUvwWrk?autoplay=1&amp;rel=0&amp;autohide=1" class="video_pop_up" rel="galleryVid">
-            <img src="http://img.youtube.com/vi/BLQFAUvwWrk/0.jpg" width="356" height="200" />
-            <h4>Item</h4>
+      <a href = "http://www.youtube.com/embed/cWw-PGPuvRM?autoplay=1&amp;rel=0&amp;autohide=1" class="video_pop_up" rel="galleryVid">
+            <img src="http://img.youtube.com/vi/cWw-PGPuvRM/0.jpg" width="356" height="200" />
+            <h4>LA Dodgers vs LA Angels Aug, 1</h4>
             <span class="play">&nbsp;</span>
         </a>
      </a>
