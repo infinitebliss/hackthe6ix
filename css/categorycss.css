@@ -12,9 +12,9 @@ body {
     }
 
     .c {
-        width: 4000px;
+        width: 2550px;
         max-height 350px;
-        overflow-x: scroll;
+        /*overflow-x: scroll;*/
     }
     img {
         display: block;
