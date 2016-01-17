@@ -55,6 +55,12 @@
         }
     </style> 
 
+    <script type="text/javascript">
+    $(document).ready(function() { // DOM ready
+    $('#wrapper').hide();
+});
+    </script>
+
 </head>
 
 <body>
@@ -94,14 +100,14 @@
 
     </nav>
 
-    <div id="wrapper" style="padding-top:-30px">
+    <div id="wrapper" class="toggled"style="padding-top:-30px">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Bootstrap
+                        Categories
                     </a>
                 </li>
                 <li>
@@ -109,9 +115,6 @@
                 </li>
                 <li>
                     <a href="basketball.html">Basketball</a>
-                </li>
-                <li>
-                    <a href="hockey.html">Hockey</a>
                 </li>
                 <li>
                     <a href="soccer.html">Soccer</a>
